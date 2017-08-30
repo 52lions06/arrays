@@ -53,8 +53,34 @@ const mergeArray = (arr1, arr2) => {
   console.log(finalArr);
 };
 
-mergeArray(arr1, arr2);
+// mergeArray(arr1, arr2);
 
 
 
 //==================================================================================
+
+//3: Remove Characters
+
+//Write an algorithm that deletes given characters from a string. 
+//For example
+//input = string of "Battle of the Vowels: Hawaii vs. Grozny" and characters to be removed are "aeiou", 
+//output = the algorithm should transform the original string to "Bttl f th Vwls: Hw vs. Grzny".
+
+//**** Very Important: **** Do not use Javascript's filter, split, or join methods.
+
+const string = 'Battle of the Vowels: Hawaii vs. Grozny';
+
+const remove = (string) => {
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === 'a' || string[i] ===  'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u') {
+      string.replace(i, '');
+      console.log(string[i]);
+    }
+    else {
+      return string[i];
+    }
+  }
+  // console.log(string);
+};
+
+remove(string);
