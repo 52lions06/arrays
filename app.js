@@ -1,30 +1,13 @@
 const Array = require('./Array');
 
-const arr = new Array();
-arr.push(1);
-console.log('-----first push', arr);
-console.log('pointer', arr)
-arr.push(2);
-arr.push(3);
-arr.push(4);
-console.log('----second push', arr);
-arr.push(5);
-console.log('pointer', arr)
-arr.push(6);
-console.log('pointer', arr)
-arr.push(7);
-console.log('pointer', arr)
-arr.push(8);
-console.log('pointer', arr)
-arr.push(9);
-console.log('pointer', arr)
-arr.push(10);
-console.log('pointer', arr)
-arr.push(11);
-console.log('pointer', arr)
-arr.push(12);
-console.log('pointer', arr)
-arr.push(13);
-console.log('pointer', arr)
+let arr = new Array();
 
-console.log('----third push', arr);
+
+arr.push(1)
+arr.push(2)
+arr.push(3)
+arr.push(4)
+console.log(arr)
+arr.insert(1, 10)
+arr.remove(1)
+console.log(arr.get(1))
