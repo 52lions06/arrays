@@ -16,8 +16,8 @@ const lessThanFive = (arr) => {
     if (arr[i] >= 5) {
       newArr.push(arr[i]);
     }
-    // console.log(i);
-  // console.log(arr[i]);
+    // console.log(i);    // logs the "index" not the value 
+  // console.log(arr[i]); // logs the "value" in the "index"
   }
   console.log(newArr);
 };
