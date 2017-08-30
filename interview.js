@@ -22,6 +22,39 @@ const lessThanFive = (arr) => {
   console.log(newArr);
 };
 
-lessThanFive(magic);
+// lessThanFive(magic);
 // lessThanFive(array);
 
+//==================================================================================
+
+// 2: Merge Arrays
+
+//Imagine you have two arrays which have already been sorted.
+// Write an algorithm to merge the two arrays into a single array, which should also be sorted. 
+//For example, input arrays were [1, 3, 6, 8, 11] and [2, 3, 5, 8, 9, 10], 
+//output array should be [1, 2, 3, 3, 5, 6, 8, 8, 9, 10, 11].
+
+const arr1 = [1, 3, 6, 8, 11];
+const arr2 = [2, 3, 5, 8, 9, 10];
+
+const mergeArray = (arr1, arr2) => {
+  const finalArr = [];
+  for (var i = 0; i < arr1.length; i++) {
+    finalArr.push(arr1[i]);
+  }
+  for (var j = 0; j < arr2.length; j++) {
+    finalArr.push(arr2[j]);
+  }
+  finalArr.sort(function (a,b) {
+    return a - b;
+  });
+
+  // finalArr.sort(function(a,b) => { b-a;});        //can I write ES6 inside of a method
+  console.log(finalArr);
+};
+
+mergeArray(arr1, arr2);
+
+
+
+//==================================================================================
