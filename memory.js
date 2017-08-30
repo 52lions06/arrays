@@ -15,9 +15,9 @@ var allocate = function (size) {            //reserves a contiguous block of mem
 
 var free = function (ptr) {   //frees the block of memory reserved using allocate.
 };
-
+                    //0, 10, 3            /1    
 var copy = function (to, from, size) {   //copies size boxes of data from the from pointer to the to pointer. 
-                                         //For example, copy(10, 0, 3) would copy the values at boxes 0, 1 and 2 to the boxes at 10, 11 and 12 respectively.
+                                        //For example, copy(10, 0, 3) would copy the values at boxes 0, 1 and 2 to the boxes at 10, 11 and 12 respectively.
     if (from === to) {  
         return;                             //copy (10,2,4) => we start at 12 because of the 2.....4 blocks long from there...12,13,14,15
     }                                               //******* where do we start from 10 or 12 ******/
@@ -43,8 +43,4 @@ var set = function (ptr, value) {  //sets the value stored at a certain memory a
     memory[ptr] = value;
 };
 
-exports.allocate = allocate; 
-exports.free = free;
-exports.copy = copy;
-exports.get = get;
-exports.set = set;
+module.exports = {allocate, free, copy, get, set};
